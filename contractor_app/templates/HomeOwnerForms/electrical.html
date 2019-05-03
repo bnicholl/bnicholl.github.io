@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function dynInput(cbox) {
+			if (cbox.checked) {
+			var input = document.createElement("input");
+			input.type = "text";
+			var div = document.createElement("div");
+			div.id = cbox.name;
+			div.innerHTML = "Text to display for " + cbox.id;
+			div.appendChild(input);
+			document.getElementById("insertinputs").appendChild(div);
+		  } else {
+			document.getElementById(cbox.name).remove();
+		  }
+		}
+</script>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<style>
+</style>
+</head>
+<body>
+
+<h1>Choose the type of carpentry job you need:</h1>
+
+<form method = "post" action = "/post_client">
+  <div class = "left centered >
+  		<div style="display: flex; justify-content: space-around">
+			<div >
+			  <input type="checkbox" id="check2" name="check2" onclick="dynInput(this);" />
+			  <p id="insertinputs"></p>
+			  <br></br>
+			</div>
+		</div>
+	</div>
+</form>
+
+</body>
+</html>

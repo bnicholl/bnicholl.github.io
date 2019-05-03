@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<script type = "text/javascript">
+            function Redirect(job) {
+            	localStorage['job'] = job.name;
+            	
+            	window.location = `HomeOwnerPage/${job.id}`;
+               
+            }
+
+      </script>
+      
+
+      </form>
+      
+  <title></title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <form method = "post" >
+  	<div >
+		<div>
+			<!these inputs return a key value pair, the key, for example 'name = agreement_status'
+			must match the key that is in the postgres column>
+			<h2>WILL GET DELETED. from this page, we should only push to a few different submit pages. The use will type in things 
+			length of fence if applicable, sqaure footage of lawn if applicable, etc. When the contractors recieve this form, and 
+			are asked to put down a bid, an option "requst more information" will be available. We will use ML to calculate the
+			percentage of people requesting more info, and when it exceeds a certain percentage, we will make ask the user to fill
+			in more info for a more accurate bid</h2>
+			<h1>Lets get your first professional </h1>
+		</div>
+		<div>
+  		<div style="display: flex; justify-content: space-around">
+			<div >
+			  <h2> Carpentry</h2>
+			  <button class="button" type="button" id="outdoorwalkway" name="deck" page="deck" onclick="Redirect(this)">Deck work
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="walk" name="floor" onclick="Redirect(this)">Flooring
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="dry_wall" name="dry_wall" onclick="location.href ='HomeOwnerPage/decks'">Dry Wall
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="cabinet_doors" name="cabinet_doors" onclick="location.href ='HomeOwnerPage/dry_wall'">Cabinet/Doors Installation
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="roofing" name="roofing" onclick="location.href ='HomeOwnerPage/roofing'">Roofing
+			  </button>
+			  <br></br>
+			</div>
+
+			<div >
+			  <h2> landscaping/hardscaping</h2>
+			  <br></br>
+			  <button class="button" type="button" id="lawn_care" name="lawn_care" onclick="location.href ='HomeOwnerPage/plumbing'">lawn care
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="tree_work" name="tree_work" onclick="location.href ='HomeOwnerPage/electrical'">tree work
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="outdoorwalkway" name="driveway" onclick="Redirect(this)">driveway paving
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="outdoorwalkway" name="walkway" onclick="Redirect(this)">walkway paving
+			  </button>
+			</div>
+			
+		</div>
+		<div style="display: flex; justify-content: space-around">
+			<div >
+			  <h2> Electrical</h2>
+			  <br></br>
+			  <button class="button" type="button" id="electrical_installations " name="electrical_installations " onclick="location.href ='HomeOwnerPage/plumbing'">Electrical Installations 
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="run_electrical_wire" name="run_electrical_wire" onclick="location.href ='HomeOwnerPage/electrical'">Run Electrical Wire
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="wire_repair" name="wire_repair" onclick="location.href ='HomeOwnerPage/landscaping'">Electrical Wire Repair
+			  </button>
+			  <br></br>
+			</div>
+			
+			<div >
+			  <h2> Plumbing and HVAC</h2>
+			  <br></br>
+			  <button class="button" type="button" id="plumbing_installations" name="plumbing_installations" onclick="location.href ='HomeOwnerPage/plumbing'">Plumbing Installations
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="plumbing_issues" name="plumbing_issues" onclick="location.href ='HomeOwnerPage/electrical'"> leaky pipes/ Plumbing issues
+			  </button>
+			  <br></br>
+			  <button class="button" type="button" id="HVAC" name="HVAC" onclick="location.href ='HomeOwnerPage/electrical'"> HVAC
+			  </button>
+			  <br></br>
+			</div>
+			
+		</div>	
+		</div>
+	</div>	
+  </form>
+
+</body>
+</html>

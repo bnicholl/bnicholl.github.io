@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<style>
+</style>
+</head>
+<body>
+
+<h1>Last page of information!:</h1>
+
+<form method = "post" action = "/post_client">
+  <div style="display: flex; justify-content: space-around">
+  	<div >
+  		<input type="checkbox" id="plumbing" name="plumbing" onclick=alert('ok')>
+		<label class = checkboxlabel for = "plumbing" > plumbing </label>
+		<br></br>
+		<input type="checkbox" id="decks" name="decks" onclick=alert(localStorage.getItem('job')) >
+		<label class = checkboxlabel for = "plumbing" > job.name </label>	
+		<br></br>
+		<input type="checkbox" id="lawn_care" name="lawn_care" >
+		<label class = checkboxlabel for = "lawn_care" > lawn care </label>
+	</div>
+  </div>
+</form>
+
+</body>
+</html>

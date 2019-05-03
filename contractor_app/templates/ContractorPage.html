@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<style>
+</style>
+</head>
+<body>
+
+<h1>Fill out this form to start increasing your clientele:</h1>
+
+<form method = "post" action = "/post_client">
+  <div>
+  	<label class = checkboxlabel for="fname">First Name</label>
+  	<br></br>
+  	<input class = checkboxlabel type="text" id="fname" name="fname" >
+  	<br></br>
+  	<label class = checkboxlabel for="lname">Last Name</label>
+  	<br></br>
+  	<input class = checkboxlabel type="text" id="lname" name="lname">
+  	<br></br>
+  	<label class = checkboxlabel for="company_name">Company Name</label>
+  	<br></br>
+  	<input class = checkboxlabel type="text" id="company_name" name="company_name">
+  	<br></br>
+  	<label class = checkboxlabel for="employees">Number of Employees</label>
+  	<br></br>
+  	<input class = checkboxlabel type="text" id="employees" name="employees">
+  	<br></br>
+  	<label class = checkboxlabel for="website">Company Website or Portfolio</label>
+  	<br></br>
+  	<input class = checkboxlabel type="text" id="website" name="website">
+  	<br></br>
+  	<label class = checkboxlabel for="license">Contractor License Number</label>
+  	<br></br>
+  	<input class = checkboxlabel type="text" id="license" name="license">
+  </div>
+  
+  <div>
+  	<h2> check off all of the boxes that you consider your area of expertise <br>
+  	you will receive notifications for potential jobs for every specialty you check</h2>
+  </div>
+  
+  <div style="display: flex; justify-content: space-around">
+  	<div >
+		<input type="checkbox" id="decks" name="decks" >
+		<label class = checkboxlabel for = "plumbing" > deck work </label>	
+		<br></br>
+		<input type="checkbox" id="plumbing" name="plumbing" >
+		<label class = checkboxlabel for = "plumbing" > plumbing </label>
+		<br></br>
+		<input type="checkbox" id="lawn_care" name="lawn_care" >
+		<label class = checkboxlabel for = "lawn_care" > lawn care </label>
+	</div>
+	<div>
+		<input type="checkbox" id="decks" name="decks" >
+		<label class = checkboxlabel for = "decks" > decks </label>
+		<br></br>
+		<input type="checkbox" id="flooring" name="flooring" >
+		<label class = checkboxlabel for = "flooring" > flooring </label>
+		<br></br>
+		<input type="checkbox" id="electrical" name="electrical" >
+		<label class = checkboxlabel for = "electrical" > electrical </label>
+	</div>
+	<div>
+		<input type="checkbox" id="carpentry" name="carpentry" >
+		<label class = checkboxlabel for = "carpentry" > carpentry </label>
+		<br></br>
+		<input type="checkbox" id="hardscaping" name="hardscaping" >
+		<label class = checkboxlabel for = "hardscaping" > hardscaping </label>
+		<br></br>
+		<input type="checkbox" id="tree_work" name="tree_work" >
+		<label class = checkboxlabel for = "tree_work" > tree work </label>
+	</div>
+	
+  	<!when we hit the submit button, link goes to /post_client, then post_client() function
+	is read>
+	<div>
+		<br></br>
+  		<input type = "submit" />
+  	</div>
+  </div>
+</form>
+
+</body>
+</html>

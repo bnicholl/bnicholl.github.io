@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <title></title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <form > 
+  	<div class  = centered>
+  	<!these inputs return a key value pair, the key, for example 'name = agreement_status'
+  	must match the key that is in the postgres column>
+  	<button class="button" type="button" id="contractor" name="contractor" onclick="location.href ='ContractorPage'">Contractors looking for work?
+  	lets find you some clients!</button>
+	<br><br/>
+	<button class="button" type="button" id="homeowner" name="homeowner" onclick="location.href ='HomeOwnerPage'">Homeowner or investor? Lets connect you
+	with a contractor</button>
+	<div>
+	
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+<style>
+</style>
+</head>
+<body>
+
+<h1>Lets buuild you that deck!:</h1>
+<br></br>
+<button class="button" type="button" id="outdoorwalkway" name="deck" page="deck" onclick="Redirect(this)">click here for deck repairs
+			  </button>
+
+
+<form method = "post" action = "/post_client">
+  <div class  = "left">
+  	
+	<div id = "elements_allign">
+	
+		<h2> Estimate square feet of deck  </h2>
+			
+		<label class = checkboxlabel for="fname">length in feet</label>
+		<input class = checkboxlabel type="squarefootage_text" id="fname" name="fname" >
+			
+		<label class = checkboxlabel for="lname">width in feet</label>
+		<input class = checkboxlabel type="squarefootage_text" id="lname" name="lname" >
+		<br></br>
+		
+	</div>
+	
+	<div id = "elements_allign">
+		<input type="checkbox" id="plumbing" name="plumbing" onclick=alert('ok')>
+		<label class = checkboxlabel for = "plumbing" > plumbing </label>
+		<br></br>
+		<input type="checkbox" id="decks" name="decks" onclick=alert(localStorage.getItem('job')) >
+		<label class = checkboxlabel for = "plumbing" > job.name </label>	
+		<br></br>
+		<input type="checkbox" id="lawn_care" name="lawn_care" >
+		<label class = checkboxlabel for = "lawn_care" > lawn care </label>
+	</div>
+	
+  </div>
+</form>
+
+</body>
+</html>
